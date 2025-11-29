@@ -1,0 +1,429 @@
+/* ==============================
+   GLOBAL VARIABLES & RESET
+============================== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-color: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    background-color: var(--white);
+  }
+  
+  /* ==============================
+     SECTIONS & TITLES
+  ============================== */
+  .section-padding {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .subsection-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .bg-light {
+    background-color: var(--light-bg);
+  }
+  
+  /* ==============================
+     NAVBAR
+  ============================== */
+  .navbar {
+    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .navbar-brand small {
+    color: #bdc3c7;
+    font-size: 0.8rem;
+    display: block;
+  }
+  
+  .navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: var(--secondary-color) !important;
+  }
+  
+  .dropdown-menu {
+    background-color: var(--primary-color);
+    border: none;
+  }
+  
+  .dropdown-item {
+    color: var(--white);
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* ==============================
+     HERO SECTION
+  ============================== */
+  .hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .hero-content {
+    /* background: rgba(0, 0, 0, 0.5); */
+    width: 100%;
+    padding: 150px 0;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary {
+    background: var(--secondary-color);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+  }
+  
+  /* ==============================
+     VISION / MISSION / VALUES
+  ============================== */
+  .vision-card,
+  .mission-card,
+  .values-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .vision-card:hover,
+  .mission-card:hover,
+  .values-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .vision-card h3 i {
+    color: var(--accent-color);
+    margin-right: 10px;
+  }
+  
+  .mission-card h3 i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+  }
+  
+  .values-card h3 i {
+    color: #27ae60;
+    margin-right: 10px;
+  }
+  
+  /* ==============================
+     PROJECT CARDS
+  ============================== */
+  .project-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .project-details {
+    padding: 2rem;
+  }
+  
+  .project-details h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .project-location {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .project-location i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+  }
+  
+  /* ==============================
+     ABOUT SECTION
+  ============================== */
+  .about-content,
+  .owner-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .owner-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .owner-card blockquote {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 1.5rem;
+  }
+  
+  /* ==============================
+     SERVICES SECTION
+  ============================== */
+  .service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+  
+  .why-us i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .why-us h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ==============================
+     CONTACT SECTION
+  ============================== */
+  .contact-section {
+    background: var(--white);
+  }
+  
+  .contact-form .form-control {
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-form .btn-primary {
+    width: 100%;
+  }
+  
+  iframe {
+    border-radius: 10px;
+  }
+  
+  /* ==============================
+     FOOTER
+  ============================== */
+  .footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  /* ==============================
+     RESPONSIVE DESIGN
+  ============================== */
+  
+  /* Tablets */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background: rgba(10, 61, 98, 0.95);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  
+    .navbar-nav .nav-link {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .dropdown-menu {
+      background: rgba(44, 62, 80, 0.95);
+    }
+  
+    .hero-title {
+      font-size: 2.8rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero-section {
+      min-height: auto;
+      padding: 100px 20px;
+    }
+  
+    .hero-title {
+      font-size: 2.2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .section-padding {
+      padding: 60px 0;
+    }
+  
+    .project-details {
+      padding: 1.5rem;
+    }
+  
+    .project-image img {
+      height: 200px;
+    }
+  
+    .why-us .col-md-3 {
+      margin-bottom: 1.5rem;
+    }
+  
+    .contact-form {
+      margin-bottom: 2rem;
+    }
+  
+    iframe {
+      height: 300px;
+    }
+  
+    .owner-card,
+    .about-content,
+    .project-card,
+    .service-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* Small Phones */
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+  
+    .hero-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  
